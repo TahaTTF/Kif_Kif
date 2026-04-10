@@ -1,37 +1,226 @@
-# Kif Kif AI 🎓
+# Kif Kif AI 🎓🤖
 
-Plateforme intelligente pour aider les étudiants avec :
+**Kif Kif AI** is an intelligent accessibility platform designed to support inclusive education by helping people with disabilities interact with educational content in multiple formats (text, audio, and sign language).
 
-## 🚀 Fonctionnalités
+## 🏠 Platform Interface
 
-### 1. PDF → Audio
-- Extraction texte PDF
-- Traduction automatique
-- Conversion en audio
+![Home UI](frontend/public/screenshots/home1.png)
+![Home UI 2](frontend/public/screenshots/home2.png)
+---
 
-### 2. Video → Text
-- Transcription audio
-- Converts speech into text using AI transcription
-- Résumé intelligent (using ai API  )
+## 🎯 Problem & Motivation
 
-### 3. Sign Language → Text (Frontend Ready)
-- Interface webcam
-- Détection gestes (à venir backend)
+In many educational systems, several major challenges exist:
 
-# 🏗️ Technical Architecture
+* ❌ Early school dropout due to lack of adapted learning tools
+* ❌ Difficulty for disabled students to integrate into traditional schools
+* ❌ Lack of specialized teachers, especially for:
 
-The project follows a full-stack architecture:
+  * Sign language
+  * Inclusive education
+* ❌ Limited access to learning resources for:
 
-* **Frontend** → React (Vite)
-* **Backend** → FastAPI (Python)
-* **AI Processing** → TensorFlow / Keras / OpenCV
-* **Media Processing** → PDF parsing, TTS, Audio extraction
+  * Deaf and hard-of-hearing individuals
+  * Visually impaired or blind users
 
 ---
 
-# ⚙️ Installation
+## 💡 Our Solution
 
-## 🔹 Backend
+👉 **Kif Kif AI** aims to:
+
+* Improve accessibility to education
+* Encourage learning for all
+* Provide intelligent tools powered by AI
+* Reduce communication barriers
+
+---
+
+## 👥 Target Users
+
+The platform is designed for:
+
+### 🧏 Deaf & Hard-of-Hearing People
+
+* Convert sign language → text
+* Access video content through subtitles
+
+### 👁️ Visually Impaired / Blind Users
+
+* Convert PDF → audio
+* Listen instead of reading
+
+### 👨‍🎓 Students using Sign Language
+
+* Learn and communicate through gestures
+
+### 🎓 General Students
+
+* Understand videos faster with summaries
+* Convert content into easier formats
+
+---
+
+## 🚀 Features
+
+---
+
+### 📄 1. PDF → Audio
+
+#### 🎯 Goal
+
+Make documents accessible for visually impaired users.
+
+#### ⚙️ Features
+
+* Extract text from PDF
+* Detect language automatically
+* Translate content (multi-language)
+* Convert text → speech (audio)
+
+#### 👥 Who can use it?
+
+* Blind users
+* Students who prefer listening
+* Language learners
+
+### 📄 PDF → Audio
+
+![PDF Audio](frontend/public/screenshots/audio.png)
+
+---
+
+### 🎥 2. Video → Text + Summary
+
+#### 🎯 Goal
+
+Help users understand video content easily.
+
+#### ⚙️ Features
+
+* Extract audio from video (ffmpeg)
+* Speech-to-text (Whisper AI)
+* Automatic transcription
+* AI-generated summary
+
+#### 👥 Who can use it?
+
+* Deaf users (subtitles)
+* Students reviewing lessons
+* Anyone who wants quick understanding
+
+### 🎥 Video → Text
+
+![Video Result](frontend/public/screenshots/video1.png)
+![Video Result 2](frontend/public/screenshots/video2.png)
+
+---
+
+### ✋ 3. Sign Language → Text (In Progress)
+
+#### 🎯 Goal
+
+Enable communication using sign language.
+
+#### ⚙️ Features
+
+* Webcam capture
+* Image preprocessing (OpenCV)
+* Gesture recognition (CNN model)
+* Convert signs → letters → text
+
+#### 👥 Who can use it?
+
+* Deaf users
+* Sign language learners
+* Communication assistance tools
+
+### ✋ Sign Language → Text
+
+![Sign UI](frontend/public/screenshots/sign1.png)
+![Sign Detection](frontend/public/screenshots/sign2.png)
+
+---
+
+## 🏗️ Technical Architecture
+
+---
+
+## 🏗️ Technical Architecture
+
+---
+
+### 🧩 Global Architecture
+
+![Global Architecture](frontend/public/screenshots/architecture-global.jpg)
+
+---
+
+### 🎥 Video → Text Pipeline
+
+![Video Pipeline](frontend/public/screenshots/architecture-video.jpg)
+
+---
+
+### 📄 PDF & ✋ Sign Pipeline
+
+![PDF & Sign Pipeline](frontend/public/screenshots/architecture-pdf-sign.jpg)
+
+---
+
+### ⚙️ Tech Stack
+
+![Stack](frontend/public/screenshots/architecture-stack.jpg)
+
+
+---
+
+## ⚙️ Tech Stack
+
+### 🟢 Frontend
+
+* React (Vite)
+* Tailwind CSS
+
+👉 Why?
+
+* Fast UI
+* Interactive
+* Modern design
+
+---
+
+### 🔵 Backend
+
+* FastAPI (Python)
+
+👉 Why?
+
+* High performance
+* Async support
+* Easy API integration
+
+---
+
+### 🧠 AI & Processing
+
+* Whisper → Speech-to-Text
+* TensorFlow / Keras → Sign recognition
+* OpenCV → Image processing
+* Gemini API → Text summarization
+
+---
+
+### 🟡 Tools
+
+* ffmpeg → Audio extraction
+* gTTS → Text-to-Speech
+
+---
+
+## ⚙️ Installation
+
+### 🔹 Backend
 
 ```bash
 cd backend
@@ -44,7 +233,7 @@ uvicorn main:app --reload
 
 ---
 
-## 🔹 Frontend
+### 🔹 Frontend
 
 ```bash
 cd frontend
@@ -54,68 +243,76 @@ npm run dev
 
 ---
 
-# 📌 Notes
+## 📦 Requirements
 
-* `backend-sign` → en cours de développement
-* Gemini API nécessite un quota actif
+### Backend
 
----
-
-# 📦 Backend Requirements
-
-* fastapi
-* uvicorn
-* tensorflow
-* keras
-* opencv-python
-* ffmpeg-python
-* numpy
-* pillow
-* pydantic
-* python-multipart
-
----
-
-# 📦 Frontend Requirements
-
-* react
-* vite
-* axios
-* tailwindcss
+```
+fastapi
+uvicorn
+python-multipart
+pydantic
+numpy
+opencv-python
+pillow
+tensorflow
+keras
+openai-whisper
+ffmpeg-python
+pypdf
+PyMuPDF
+gtts
+google-generativeai
+```
 
 ---
 
-# ⚙️ How It Works
+### Frontend
 
-## 🔹 Sign to Text
-
-* Capture image from camera
-* Preprocess image (grayscale, resize)
-* Send to AI model
-* Return predicted letter
-
----
-
-## 🔹 PDF to Audio
-
-* Upload PDF
-* Extract text
-* Convert to speech (TTS)
-* Return audio file
+```
+react
+vite
+axios
+tailwindcss
+```
 
 ---
 
-## 🔹 Video to Text
+## 🧠 AI Model
 
-* Upload video
-* Extract audio
-* Convert speech → text
-* Display transcription
+* CNN trained for sign language recognition
+* Input: 128x128 grayscale image
+* Output: A-Z + blank
+
+
 
 ---
 
-# 🧠 AI Models
+## 📌 Notes
 
-* CNN model trained for hand gesture recognition
-* **Input:** Image (128x128 grayscale)
-* **Output:** Alphabet prediction (A-Z + blank)
+* `backend-sign` → experimental / in progress
+* Gemini API requires active quota
+* GPU not required (CPU works fine)
+
+---
+
+## 👨‍💻 Author
+
+team Peaky blinders
+
+---
+
+## ⭐ Future Improvements
+
+* Real-time sign detection
+* Multi-language voice support
+* AI-powered learning assistant
+* Deployment (Docker / Cloud)
+
+---
+
+## 💬 Vision
+
+> “Kif Kif AI aims to make education equal and accessible for everyone.”
+
+
