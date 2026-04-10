@@ -152,25 +152,25 @@ Enable communication using sign language.
 
 ### 🧩 Global Architecture
 
-![Global Architecture](frontend/public/screenshots/architecture-global.jpg)
+![Global Architecture](frontend/public/screenshots/architecture-global.jpeg)
 
 ---
 
 ### 🎥 Video → Text Pipeline
 
-![Video Pipeline](frontend/public/screenshots/architecture-video.jpg)
+![Video Pipeline](frontend/public/screenshots/architecture-video.jpeg)
 
 ---
 
 ### 📄 PDF & ✋ Sign Pipeline
 
-![PDF & Sign Pipeline](frontend/public/screenshots/architecture-pdf-sign.jpg)
+![PDF & Sign Pipeline](frontend/public/screenshots/architecture-pdf-sign.jpeg)
 
 ---
 
 ### ⚙️ Tech Stack
 
-![Stack](frontend/public/screenshots/architecture-stack.jpg)
+![Stack](frontend/public/screenshots/architecture-stack.jpeg)
 
 
 ---
