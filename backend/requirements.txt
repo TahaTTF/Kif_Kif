@@ -2,7 +2,24 @@ fastapi
 uvicorn
 python-multipart
 pydantic
+numpy
 opencv-python
 pillow
-numpy
+
+# AI
+tensorflow
+keras
+
+# Speech & Video
+openai-whisper
 ffmpeg-python
+
+# PDF
+pypdf
+PyMuPDF
+
+# TTS
+gtts
+
+# Google Gemini
+google-generativeai

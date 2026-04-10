@@ -11,7 +11,8 @@ Plateforme intelligente pour aider les étudiants avec :
 
 ### 2. Video → Text
 - Transcription audio
-- Résumé intelligent
+- Converts speech into text using AI transcription
+- Résumé intelligent (using ai API  )
 
 ### 3. Sign Language → Text (Frontend Ready)
 - Interface webcam
@@ -19,28 +20,71 @@ Plateforme intelligente pour aider les étudiants avec :
 
 ---
 
-## 🛠️ Tech Stack
+🏗️ Technical Architecture
 
-- Frontend: React + Vite
-- Backend: FastAPI
-- AI: Whisper / Gemini / TTS
+The project follows a full-stack architecture:
+
+Frontend → React (Vite)
+Backend → FastAPI (Python)
+AI Processing → TensorFlow / Keras / OpenCV
+Media Processing → PDF parsing, TTS, Audio extraction
 
 ---
 
-## 📦 Installation
-
-### Backend
-
-```bash
+⚙️ Installation
+🔹 Backend
 cd backend
+python -m venv .venv
+.venv\Scripts\activate
+
 pip install -r requirements.txt
 uvicorn main:app --reload
-
-### frontend
+🔹 Frontend
 cd frontend
 npm install
 npm run dev
 
+---
+
 📌 Notes
 backend-sign en cours de développement
 Gemini API nécessite quota actif
+
+📦 Backend Requirements
+fastapi
+uvicorn
+tensorflow
+keras
+opencv-python
+ffmpeg-python
+numpy
+pillow
+pydantic
+python-multipart
+📦 Frontend Requirements
+react
+vite
+axios
+tailwindcss
+
+
+⚙️ How It Works
+1. Sign to Text
+Capture image from camera
+Preprocess image (grayscale, resize)
+Send to AI model
+Return predicted letter
+2. PDF to Audio
+Upload PDF
+Extract text
+Convert to speech (TTS)
+Return audio file
+3. Video to Text
+Upload video
+Extract audio
+Convert speech → text
+Display transcription
+🧠 AI Models
+CNN model trained for hand gesture recognition
+Input: Image (128x128 grayscale)
+Output: Alphabet prediction (A-Z + blank)
