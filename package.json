@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "jspdf": "^4.2.1",
-    "react-webcam": "^7.2.0"
-  }
-}
