@@ -111,8 +111,8 @@ Help users understand video content easily.
 
 ### 🎥 Video → Text
 
-![Video Result](frontend/public/screenshots/video 1.png)
-![Video Result 2](frontend/public/screenshots/video 2.png)
+![Video Result](frontend/public/screenshots/video1.png)
+![Video Result 2](frontend/public/screenshots/video2.png)
 
 ---
 
@@ -137,8 +137,8 @@ Enable communication using sign language.
 
 ### ✋ Sign Language → Text
 
-![Sign UI](frontend/public/screenshots/sign 1.png)
-![Sign Detection](frontend/public/screenshots/sign 2.png)
+![Sign UI](frontend/public/screenshots/sign1.png)
+![Sign Detection](frontend/public/screenshots/sign2.png)
 
 ---
 
@@ -152,7 +152,7 @@ Enable communication using sign language.
 
 ### 🧩 Global Architecture
 
-![Global Architecture](frontend/public/screenshots/Global Architecture.jpg)
+![Global Architecture](frontend/public/screenshots/architecture-global.jpg)
 
 ---
 
